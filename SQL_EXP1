@@ -6,10 +6,6 @@ use nithin;
 
 create table Student(rollno int Primary Key,name varchar(50),DOB date,adress varchar(100),phoneno varchar(10),blood_group varchar(10));
 
-//to create a table Course containing Course_id as unique, course_name ,duration
-
-create table course(course_id varchar(10) primary key,course_name varchar(10),duration varchar(20));
-
 //to insert values into STUDENT table use insert command
 
  insert into student values(100,"Jomy",'2006-02-12',"adoor",8347824787,"o+ve");
@@ -17,4 +13,65 @@ create table course(course_id varchar(10) primary key,course_name varchar(10),du
  insert into student values(102,"karan",'2004-01-23',"alapuzha",9123984787,"ab+ve");
  insert into student values(103,"priyanka",'2002-04-14',"idukki",7847984787,"a-ve");
  
+ //to display the student table
+ 
+ select*from student;
+ +--------+----------+------------+------------+------------+-------------+
+| rollno | name     | DOB        | adress     | phoneno    | blood_group |
++--------+----------+------------+------------+------------+-------------+
+|    100 | Jomy     | 2006-02-12 | adoor      | 8347824787 | o+ve        |
+|    101 | shella   | 2005-02-13 | thiruvalla | 8347984787 | b+ve        |
+|    102 | karan    | 2004-01-23 | alapuzha   | 9123984787 | ab+ve       |
+|    103 | priyanka | 2002-04-14 | idukki     | 7847984787 | a-ve        |
++--------+----------+------------+------------+------------+-------------+
 
+ *******************************************************************************************
+ //to create another table named Course containing Course_id as unique, course_name ,duration
+
+create table course(course_id varchar(10) primary key,course_name varchar(10),duration varchar(20));
+
+//to insert values into course table use INSERT command
+
+ insert into course values(12001,"maths","2 years");
+ insert into course values(12002,"physics",'3 years');
+ insert into course values(12003,"science",'2 years');
+ 
+ //to display course table use select command
+ 
+ select*from course;
+ 
+ +-----------+-------------+----------+
+| course_id | course_name | duration |
++-----------+-------------+----------+
+| 12001     | maths       | 2 years  |
+| 12002     | physics     | 3 years  |
+| 12003     | science     | 2 years  |
++-----------+-------------+----------+
+********************************************************************************************
+//to display structure of student table use desc command
+
+desc student;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| rollno      | int          | NO   | PRI | NULL    |       |
+| name        | varchar(50)  | YES  |     | NULL    |       |
+| DOB         | date         | YES  |     | NULL    |       |
+| adress      | varchar(100) | YES  |     | NULL    |       |
+| phoneno     | varchar(10)  | YES  |     | NULL    |       |
+| blood_group | varchar(10)  | YES  |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+
+alter table student drop column blood_group;
+
+ desc student;
+ +---------+--------------+------+-----+---------+-------+
+| Field   | Type         | Null | Key | Default | Extra |
++---------+--------------+------+-----+---------+-------+
+| rollno  | int          | NO   | PRI | NULL    |       |
+| name    | varchar(50)  | YES  |     | NULL    |       |
+| DOB     | date         | YES  |     | NULL    |       |
+| adress  | varchar(100) | YES  |     | NULL    |       |
+| phoneno | varchar(10)  | YES  |     | NULL    |       |
++---------+--------------+------+-----+---------+-------+
+ 
