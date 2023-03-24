@@ -75,3 +75,36 @@ alter table student drop column blood_group;
 | phoneno | varchar(10)  | YES  |     | NULL    |       |
 +---------+--------------+------+-----+---------+-------+
  
+ alter table student add column number_of varchar(10);
+ 
+ desc student;
+ 
+ +-----------+--------------+------+-----+---------+-------+
+| Field     | Type         | Null | Key | Default | Extra |
++-----------+--------------+------+-----+---------+-------+
+| rollno    | int          | NO   | PRI | NULL    |       |
+| name      | varchar(50)  | YES  |     | NULL    |       |
+| DOB       | date         | YES  |     | NULL    |       |
+| adress    | varchar(100) | YES  |     | NULL    |       |
+| phoneno   | varchar(10)  | YES  |     | NULL    |       |
+| number_of | varchar(10)  | YES  |     | NULL    |       |
++-----------+--------------+------+-----+---------+-------+
+
+alter table student modify column phoneno bigint(10);
+
+desc student;
++-----------+--------------+------+-----+---------+-------+
+| Field     | Type         | Null | Key | Default | Extra |
++-----------+--------------+------+-----+---------+-------+
+| rollno    | int          | NO   | PRI | NULL    |       |
+| name      | varchar(50)  | YES  |     | NULL    |       |
+| DOB       | date         | YES  |     | NULL    |       |
+| adress    | varchar(100) | YES  |     | NULL    |       |
+| phoneno   | bigint       | YES  |     | NULL    |       |
+| number_of | varchar(10)  | YES  |     | NULL    |       |
++-----------+--------------+------+-----+---------+-------+
+
+ drop table student;
+ 
+ drop database nithin;
+ 
