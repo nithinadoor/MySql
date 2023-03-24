@@ -1,0 +1,20 @@
+create database nithin;
+
+use nithin;
+
+//to create a table student containing rollno as unique,name,DOB,adress,phoneno,blood_group
+
+create table Student(rollno int Primary Key,name varchar(50),DOB date,adress varchar(100),phoneno varchar(10),blood_group varchar(10));
+
+//to create a table Course containing Course_id as unique, course_name ,duration
+
+create table course(course_id varchar(10) primary key,course_name varchar(10),duration varchar(20));
+
+//to insert values into STUDENT table use insert command
+
+ insert into student values(100,"Jomy",'2006-02-12',"adoor",8347824787,"o+ve");
+ insert into student values(101,"shella",'2005-02-13',"thiruvalla",8347984787,"b+ve");
+ insert into student values(102,"karan",'2004-01-23',"alapuzha",9123984787,"ab+ve");
+ insert into student values(103,"priyanka",'2002-04-14',"idukki",7847984787,"a-ve");
+ 
+
